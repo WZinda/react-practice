@@ -18,17 +18,19 @@
         }
     }
 
+    class Buttonify extends React.Component {
+        render() {
+            return(
+                <div>
+                    <button type={this.props.behavior}>{this.props.children}</button>
+                </div>
+            );
+        }
+    }
+
     ReactDOM.render(
         <div>
-            <HelloWorld greetTarget="Batman"/>
-            <HelloWorld greetTarget="IronMan"/>
-            <HelloWorld greetTarget="Nicolas Cage"/>
-            <HelloWorld greetTarget="Mega Man"/>
-            <HelloWorld greetTarget="Flight of the Concords"/>
-            <HelloWorld greetTarget="Catwoman"/>
-            <HelloWorld greetTarget="Spiderman"/>
-            <HelloWorld greetTarget="Wolverine"/>
-            <HelloWorld greetTarget="Saitama"/>
+            <Buttonify behavior="submit">SEND DATA</Buttonify>
         </div>,
         document.querySelector("#container")
     );
